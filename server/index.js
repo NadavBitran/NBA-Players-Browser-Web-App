@@ -17,11 +17,11 @@ app.get(endpoints.ENDPOINT_ALL_TEAMS , async (req, res) => {
     try
     {
         const teams = await fetcher.fetchTeams();
-        res.json(teams);
+        return res.json(teams);
     }
     catch (error)
     {
-        res.status(error.correspondingStatusCode ?? 500).send(error.message);
+        return res.status(error.correspondingStatusCode ?? 500).send(error.message);
     
     }
 
@@ -34,12 +34,12 @@ app.get(endpoints.ENDPOINT_TEAM, async (req, res) => {
         const teamId = req.params.teamid;
         const players = await fetcher.fetchPlayers(teamId);
         const teamStatistics = await fetcher.fetchTeamStatistics(teamId);
-        res.json({'players' : players, 'teamStatistics' : teamStatistics});
+        return res.json({'players' : players, 'teamStatistics' : teamStatistics});
     
     }
     catch (error)
     {
-        res.status(error.correspondingStatusCode ?? 500).send(error.message);
+        return res.status(error.correspondingStatusCode ?? 500).send(error.message);
     }
  })
 
