@@ -1,0 +1,55 @@
+@mixin custom-scrollbar($thumb-color, $track-color, $width: 12px) {
+    scrollbar-width: thin; /* For Firefox */
+    scrollbar-color: $thumb-color $track-color; /* thumb and track color */
+  
+    &::-webkit-scrollbar {
+      width: $width; /* Width of the scrollbar */
+  
+      &-thumb {
+        background-color: $thumb-color; /* Color of the thumb */
+        border-radius: $width / 2; /* Radius of the thumb */
+      }
+  
+      &-track {
+        background-color: $track-color; /* Color of the track */
+      }
+    }
+}
+
+@mixin center-element {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);    
+}
+
+
+// Mixin for wrapper element with max-width
+@mixin wrapper-max-width-breakpoints() {
+
+    
+    @media (min-width: 1200px) {
+        max-width: 1200px;
+    }
+
+    @media (max-width: 1200px) {
+        max-width: 1000px;
+    }
+  
+    @media (max-width: 1000px) {
+        max-width: 800px;
+    }
+  
+    @media (max-width: 800px) {
+        max-width: 600px;
+    }
+  
+    @media (max-width: 600px) {
+        max-width: 400px;
+    }
+
+    @media (max-width: 400px) {
+        margin-inline: 1rem;
+        max-width: 100%;
+    }
+}

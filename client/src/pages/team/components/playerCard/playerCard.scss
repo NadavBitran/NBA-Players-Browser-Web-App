@@ -1,0 +1,89 @@
+@import '../../../../styles/color.scss';
+@import '../../../../styles/typography.scss';
+
+.playerBar {
+    display: flex;
+    justify-content: space-between;
+    padding: .5rem 1rem;
+    align-items: center;
+    background-color: $main-clr;
+    border: 2px solid $secondary-clr;
+    border-radius: .5rem;
+  
+    .playerName, .playerPosition {
+      @include responsive-font-variation(medium);
+      font-weight: bold;
+      color: $white-clr;
+    }
+  
+    .playerPositionAndMoreBtn {
+      display: flex;
+      gap: 1rem;
+  
+      .playerMoreBtn {
+        background-color: $secondary-clr;
+        font-weight: bold;
+        color: $white-clr;
+        border: none;
+        border-radius: .5rem;
+        cursor: pointer;
+      }
+    }
+  }
+  
+  .playerAdvancedData {
+    position: relative;
+    display: grid;
+    border-radius: .5rem;
+    margin-top: -.75rem;
+    background-color: rgba($main-clr, 0.54); // Adjusted opacity for better readability
+    gap: 1rem;
+    grid-template-areas: 
+      "playerHeight playerWeight"
+      "playerBirth playerNationality"
+      "playerInLeagueSince playerAffiliation";
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+  
+    &.expanded {
+      max-height: 500px;
+    }
+  
+    .playerHeight {
+      grid-area: playerHeight;
+    }
+  
+    .playerWeight {
+      grid-area: playerWeight;
+    }
+  
+    .playerBirth {
+      grid-area: playerBirth;
+    }
+  
+    .playerNationality {
+      grid-area: playerNationality;
+    }
+  
+    .playerInLeagueSince {
+      grid-area: playerInLeagueSince;
+    }
+  
+    .playerAffiliation {
+      grid-area: playerAffiliation;
+    }
+  
+    .playerAdvancedDataEntity {
+      padding: 1rem;
+      justify-self: center;
+      font-weight: bold;
+      color: $white-clr;
+      text-align: center;
+
+      label, p {
+        @include responsive-font-variation(medium);
+      }
+    }
+  }
+  

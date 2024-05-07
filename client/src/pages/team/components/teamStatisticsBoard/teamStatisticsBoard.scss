@@ -1,0 +1,43 @@
+@import '../../../../styles/color.scss';
+
+.teamAdvancedStatistics {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1.5rem;
+    padding: 1rem;
+    background-color: $main-clr;
+    border: 2px solid $secondary-clr;
+    border-radius: .5rem;
+    margin-top: 1rem;
+  
+    &--entity {
+      text-align: center;
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: $white-clr;
+      justify-self: center;
+    }
+  
+    &--stealsAndBlocks {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      margin-right: 1.5rem;
+      gap: 1rem;
+    }
+      &--steals, &--blocks {
+        width: 100%;
+        border: 2px solid $secondary-clr;
+        border-radius: 1rem;
+        padding: 1rem .5rem;
+      }
+
+      @media (max-width: 1000px) {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      @media (max-width: 800px) {
+        grid-template-columns: 1fr;
+      }
+  }
+  

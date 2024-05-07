@@ -1,0 +1,90 @@
+@import '../../../../styles/color.scss';
+@import '../../../../styles/typography.scss';
+
+.team_card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    justify-self: center;
+    border-radius: 0.5rem;
+    position: relative;
+    border: 2px solid $secondary-clr;
+    background-color: $main-clr;
+    width: 300px;
+    max-height: 400px;
+    padding: .5rem;
+  
+    &:hover {
+      background-color: rgba($main-clr, 0.53); // Adjusted opacity for better readability
+      transform: scale(1.05);
+    }
+  
+    &:hover .team_card--viewPlayers {
+      display: block;
+    }
+  
+    &--logo {
+      max-width: 100%;
+      height: 60%;
+      object-fit: contain;
+
+    
+        @media (max-width: 800px) {
+            max-width: 80%;
+        }
+    
+        @media (max-width: 600px) {
+            max-width: 60%;
+        }
+
+        @media (max-width: 400px) {
+            max-width: 40%;
+        }
+
+        @media (max-width: 300px) {
+            max-width: 40%;
+        }
+
+    }
+    
+  
+    &--name {
+      @include responsive-font-variation(medium);
+      font-weight: 700;
+      margin: 1rem;
+    }
+  
+    &--city {
+      @include responsive-font-variation(small);
+      font-weight: 500;
+      margin: 1rem;
+    }
+  
+    &--viewPlayers {
+      @include responsive-font-variation(normal);
+      font-weight: bold;
+      padding-block: .5rem;
+      background-color: $main-clr;
+      position: absolute;
+      top: 0;
+      right: 0;
+      border-radius: 0 .5rem 0 0;
+      border: none;
+      display: none;
+  
+      &:hover {
+        cursor: pointer;
+      }
+    }
+
+    @media (max-width: 400px) {
+        width: 90%;
+    }
+
+    @media (max-width: 320px) {
+        width: 80%;
+    }
+  }
+  

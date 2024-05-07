@@ -1,0 +1,61 @@
+@import '../../styles/color.scss';
+@import '../../styles/typography.scss';
+
+.searchBar {
+    margin-block: 1rem;
+    border-radius: .5rem;
+    padding: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: $main-clr;
+    border: 2px solid $secondary-clr;
+
+    input {
+        border: none;
+        outline: none;
+        background-color: $main-clr;
+        @include responsive-font-variation(normal);
+        font-weight: bold;
+        color: $white-clr;
+        margin-inline: 1rem;
+        margin-right: -2rem;
+
+        &::placeholder {
+            color: $white-clr;
+        }
+    }
+
+    &--itemsFound {
+        @include responsive-font-variation(normal);
+        font-weight: bold;
+        color: $white-clr;
+    }
+
+    &--clearBtn {
+        background-color: $secondary-clr;
+        font-weight: bold;
+        color: $white-clr;
+        border: none;
+        border-radius: .5rem;
+        cursor: pointer;
+    }
+
+    &__options {
+        display: flex;
+        align-items: center;
+        gap: 2rem
+    }
+
+    @media (max-width: 600px) {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+
+        &__options {
+            align-self: flex-end;
+        }
+    }
+}
+
+

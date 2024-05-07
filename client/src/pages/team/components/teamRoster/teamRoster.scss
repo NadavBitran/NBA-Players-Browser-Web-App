@@ -1,0 +1,30 @@
+@import '../../../../styles/mixinsUtils.scss';
+@import '../../../../styles/color.scss';
+
+.team__players {
+    margin-top: 1rem;
+    position: relative;
+    display: grid;
+    row-gap: .5rem;
+    max-height: calc(100vh - 20rem);
+    overflow-y: auto;
+  
+    @include custom-scrollbar($secondary-clr, $main-clr);
+
+    &--container {
+        position: relative;
+    }
+  }
+  
+  .team__playersBar, .team__statisticsBar {
+    margin: 2rem 0;
+    padding: 1rem;
+    border-radius: .5rem;
+    height: 50px;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    background-color: $main-clr;
+    border: 2px solid $secondary-clr;
+  }
+  

@@ -1,0 +1,22 @@
+@import '../../../../styles/mixinsUtils.scss';
+@import '../../../../styles/color.scss';
+
+.teamList {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); 
+    width: 100%;
+    grid-gap: 1rem;
+
+    padding-block: 1rem;
+
+    max-height: calc(100vh - 16.5rem);
+
+    overflow-y: auto;
+
+    @include custom-scrollbar($secondary-clr, $main-clr);
+
+    @media (max-width: 420px) {
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
+    }
+}

@@ -1,0 +1,21 @@
+@import '../../styles/color.scss';
+
+.Header {
+    background-color: $main-clr;
+    height: 7rem; 
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    color: $white-clr;
+    padding-left: 1rem;
+
+    img {
+        width: 3rem;
+        height: 3rem;
+    }
+
+    img:hover, h2:hover {
+        cursor: pointer;
+    }
+}
+

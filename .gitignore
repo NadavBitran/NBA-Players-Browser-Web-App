@@ -1,0 +1,51 @@
+# Styles folder from scss compiler
+/styles/
+
+# Node.js dependencies
+node_modules/
+
+# Logs
+logs
+*.log
+npm-debug.log*
+
+# Build files
+build/
+dist/
+*.bundle.js
+
+# Dependency directories
+jspm_packages/
+
+# Typescript
+*.tsbuildinfo
+
+# OSX
+.DS_Store
+
+# Editor files
+.vscode/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+.idea/
+
+# Jest coverage directory
+coverage/
+
+# Yarn
+.yarn
+.yarnrc
+.yarn-integrity
+
+# dotenv environment variable files
+.env
+.env.local
+.env.*.local
+!.env.example
+!.env.production
+!.env.development
+
+# npm
+*.lock

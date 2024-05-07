@@ -1,0 +1,32 @@
+@import './styles/color.scss';
+@import './styles/mixinsUtils.scss';
+@import './styles/typography.scss';
+
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    box-sizing: border-box;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+    background-image: url('../public/bg.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.wrapper {
+    margin-inline: auto;
+    @include wrapper-max-width-breakpoints;
+}
+
+.loadingTeams, .errorMessage, .noItemsFound {
+    @include center-element;
+    @include responsive-font-variation(large);
+    color: $white-clr;
+    font-weight: bold;
+}
+
+
+

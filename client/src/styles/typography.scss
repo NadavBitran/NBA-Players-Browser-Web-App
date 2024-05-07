@@ -1,0 +1,40 @@
+// Mixin to dynamically adjust font size based on variation and breakpoints
+@mixin responsive-font-variation($variation) {
+    @if $variation == large {
+      @include responsive-font(2rem, 1.8rem, 1.6rem, 1.5rem);
+    } @else if $variation == medium {
+      @include responsive-font(1.5rem, 1.4rem, 1.3rem, 1.2rem);
+    } @else if $variation == small {
+      @include responsive-font(1.2rem, 1.2rem, 1.1rem, 1rem);
+    } @else if $variation == normal {
+      @include responsive-font(1rem, 1rem, 1rem, 0.9rem);
+    } @else {
+      @error "Invalid font size variation. Please use 'large', 'medium', 'small', or 'normal'.";
+    }
+  }
+
+$breakpoint-lg: 768px;
+$breakpoint-md: 550px;
+$breakpoint-sm: 420px;
+  
+  // Mixin to dynamically adjust font size based on breakpoints
+  @mixin responsive-font($font-large, $font-medium, $font-small, $font-normal) {
+
+    @media (min-width: $breakpoint-lg) {
+     font-size: $font-large;
+    }
+  
+    @media (max-width: $breakpoint-lg) {
+      font-size: $font-medium;
+    }
+  
+    @media (max-width: $breakpoint-md) {
+      font-size: $font-small;
+    }
+  
+    @media (max-width: $breakpoint-sm) {
+      font-size: $font-normal;
+    }
+}
+  
+  

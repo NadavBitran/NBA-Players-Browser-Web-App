@@ -1,0 +1,30 @@
+@import '../../styles/color.scss';
+@import '../../styles/typography.scss';
+
+.home{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    min-width: 210px;
+
+    background-color: $main-clr;
+    border-radius: .5rem;
+    padding: 2rem;
+
+    box-shadow: 0 0 10px 0 #0000007e;
+
+    text-align: center;
+
+    &__startBtn {
+        @include responsive-font-variation(medium);
+        font-weight: bold;
+        padding: 1rem 2rem;
+        border: none;
+        border-radius: .5rem;
+        background-color: $secondary-clr;
+        box-shadow: 0 0 10px 0 #0000007e;
+        color: $white-clr;
+        cursor: pointer;
+    }
+}
