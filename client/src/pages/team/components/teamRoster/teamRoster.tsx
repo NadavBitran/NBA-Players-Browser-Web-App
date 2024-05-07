@@ -14,7 +14,7 @@ const TeamRoster: React.FC<TeamRosterProps> = ({ players }) => {
         <div className='team__players--container'>
             {players ? players.length > 0 ? (
             <div className="team__players">
-                {players.map(player => <PlayerCard player={player}></PlayerCard>)}    
+                {players.map(player => <PlayerCard key={player.id} player={player}></PlayerCard>)}    
             </div>) : <p className="noItemsFound">No players found</p> : <></>}
         </div>
     );
