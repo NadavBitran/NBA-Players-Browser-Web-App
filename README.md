@@ -9,6 +9,13 @@ Welcome to the NBA Players Browser, a fullstack application where users can expl
 - Explore detailed player profiles 👤
 - Responsive design for optimal viewing on all devices 📱
 
+## Video:
+
+
+https://github.com/NadavBitran/NBA-Players-Browser-Web-App/assets/122038636/600f4f42-e8f2-45f2-a7bb-a6244453bfca
+
+
+
 
 ## Live Link
 In the future.
